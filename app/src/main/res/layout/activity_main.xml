@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activity.main_.HomeActivity"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextLength"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:padding="@dimen/dp_five"
+        android:layout_margin="@dimen/dp_ten"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_max_length"
+        android:inputType="number"
+        android:text="" />
+
+    <Button
+        android:id="@+id/buttonGenerate"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/generate_random_string" />
+
+    <Button
+        android:id="@+id/buttonClearAll"
+        android:backgroundTint="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/clear_all_strings" />
+
+    <TextView
+        android:id="@+id/textViewError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewStrings"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+
+
+</LinearLayout>
