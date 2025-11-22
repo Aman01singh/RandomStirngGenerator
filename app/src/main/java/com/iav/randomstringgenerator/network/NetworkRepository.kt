@@ -6,12 +6,13 @@ import android.net.Uri
 import android.os.Bundle
 import com.iav.randomstringgenerator.data.remote.response.random_string_res.RandomString
 import org.json.JSONObject
+import androidx.core.net.toUri
 
 class NetworkRepository(private val contentResolver: ContentResolver) {
 
     fun generateString(): Result<RandomString> {
         return try {
-            val uri = Uri.parse("content://com.iav.contestdataprovider/text")
+            val uri = "content://com.iav.contestdataprovider/text".toUri()
             val projection = arrayOf("data")
 
             val bundle = Bundle().apply {
